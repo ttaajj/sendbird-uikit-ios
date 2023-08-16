@@ -505,6 +505,20 @@ extension SBUGroupChannelModule {
                 self.delegate?.groupChannelModule(self, didTapMentionUser: user)
             }
         }
+      
+      open override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return false
+      }
+      
+      open override func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+      }
+      
+      open override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+      }
+      
+      open override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return nil
+      }
         
         open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             guard indexPath.row < self.fullMessageList.count else {
