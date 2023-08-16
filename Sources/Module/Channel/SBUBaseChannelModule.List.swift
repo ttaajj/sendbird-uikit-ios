@@ -861,17 +861,17 @@ extension SBUBaseChannelModule {
             self.baseDelegate?.baseChannelModule(self, didScroll: scrollView)
         }
         
-        open override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
           false
         }
         
-        open override func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        open func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
         }
         
-        open override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        open func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         }
         
-        open override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        open func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
           nil
         }
       
